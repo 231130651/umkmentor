@@ -454,6 +454,7 @@ body {
   body {
     flex-direction: column;
     min-height: unset;
+    height: auto;
   }
 
   .left-panel {
