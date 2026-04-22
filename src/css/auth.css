@@ -451,6 +451,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    display: none;
+  }
+
   .mobile-header {
     display: flex;
     align-items: center;
@@ -469,7 +477,12 @@ body {
 
   .right-panel {
     flex: 1;
+    width: 100%;
     align-items: flex-start;
-    padding-top: 32px;
+    padding: 24px;
+  }
+
+  .auth-card {
+    max-width: 100%;
   }
 }
