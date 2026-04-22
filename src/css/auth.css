@@ -453,6 +453,7 @@ body {
 @media (max-width: 768px) {
   body {
     flex-direction: column;
+    min-height: unset;
   }
 
   .left-panel {
