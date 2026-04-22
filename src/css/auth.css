@@ -445,9 +445,31 @@ body {
   line-height: 1.6; margin-bottom: 24px;
 }
 
-/* ─── RESPONSIVE ─────────────────────────── */
+/* ─── MOBILE HEADER - RESPONSIVE ──────────────────────── */
+.mobile-header {
+  display: none;
+}
 
 @media (max-width: 768px) {
-  .left-panel { display: none; }
-  .right-panel { padding: 24px; }
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .auth-layout {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .right-panel {
+    flex: 1;
+    align-items: flex-start;
+    padding-top: 32px;
+  }
 }

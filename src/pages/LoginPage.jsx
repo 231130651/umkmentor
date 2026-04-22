@@ -81,6 +81,13 @@ export default function LoginPage() {
   }
 
   return (
+    <>
+    <header className="mobile-header">   
+      <Link to="/" className="brand-link">
+        <span className="brand-dot" aria-hidden="true"></span>
+        <span className="brand-name">UMKMentor</span>
+      </Link>
+    </header>
     <main className="auth-layout">
       <aside className="left-panel" aria-label="Informasi UMKMentor">
         <div className="left-bg" aria-hidden="true"></div>
@@ -198,5 +205,6 @@ export default function LoginPage() {
         </article>
       </dialog>
     </main>
+    </>
   )
 }
