@@ -455,6 +455,7 @@ body {
     flex-direction: column;
     min-height: unset;
     height: auto;
+    background: var(--text);
   }
 
   .left-panel {
