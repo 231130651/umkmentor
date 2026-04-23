@@ -178,9 +178,7 @@ export default function LoginPage() {
           <button type="button" className="forgot-modal-close" aria-label="Tutup" onClick={closeModal}>✕</button>
           <span className="forgot-modal-icon" aria-hidden="true">🔑</span>
           <h2 className="forgot-modal-title" id="forgotModalTitle">Lupa Password?</h2>
-          <p className="forgot-modal-desc">Masukkan email yang terdaftar, dan kami akan mengirimkan link untuk mengatur ulang password Anda.
-            Jangan lupa cek inbox atau folder spam.
-          </p>
+          <p className="forgot-modal-desc">Masukkan email yang terdaftar, dan kami akan mengirimkan link untuk mengatur ulang password Anda.</p>
           {forgotState !== 'success' ? (
             <form noValidate onSubmit={handleForgot}>
               <div className="form-group">
