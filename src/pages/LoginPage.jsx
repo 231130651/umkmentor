@@ -118,7 +118,7 @@ export default function LoginPage() {
             <blockquote className="testimonial-text">"Sebelum pakai UMKMentor, saya pilih produk asal-asalan dan rugi jutaan. Sekarang saya bisa lihat data dulu sebelum keluar modal."</blockquote>
             <figcaption className="testimonial-author">
               <span className="author-avatar" aria-hidden="true">👩</span>
-              <div><strong className="author-name">Sari Dewi</strong><span className="author-title">Seller Skincare, Shopee</span></div>
+              <div><strong className="author-name">Suminah</strong><span className="author-title">Seller Skincare, Shopee</span></div>
             </figcaption>
           </figure>
         </footer>

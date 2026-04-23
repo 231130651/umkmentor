@@ -13,6 +13,7 @@ import '../css/profile.css'
 export default function ProfilePage() {
   const navigate = useNavigate()
   const [user, setUser] = useState(null)
+  const [navOpen, setNavOpen] = useState(false)
   const [loading, setLoading] = useState(true)
   const [editName, setEditName] = useState('')
   const [saveState, setSaveState] = useState('idle')
@@ -100,21 +101,29 @@ export default function ProfilePage() {
   return (
     <div style={{ minHeight: '100vh', background: '#0D0D0D', color: '#F9F9F7', fontFamily: "'Instrument Sans', sans-serif" }}>
 
-      {/* Navbar */}
-      <header>
-        <nav>
-          <Link to="/" className="nav-logo">
-            <span className="logo-dot"></span>
-            UMKMentor
-          </Link>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <Link to="/" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '14px', textDecoration: 'none' }}>Beranda</Link>
-            <button onClick={handleLogout} className="nav-cta-outline">
+    {/* Navbar */}
+    <header className="home-header">
+      <nav>
+        <Link to="/" className="nav-logo">
+          <span className="logo-dot" aria-hidden="true"></span>
+          UMKMentor
+        </Link>
+        <ul className={`nav-links${navOpen ? ' open' : ''}`}>
+          <li>
+            <button className="nav-cta" onClick={handleLogout} style={{ background: 'none', border: '1.5px solid rgba(255,255,255,0.08)', color: '#F9F9F7', padding: '10px 22px', borderRadius: '8px', fontWeight: '600', cursor: 'pointer', fontSize: '14px' }}>
               Keluar
             </button>
-          </div>
-        </nav>
-      </header>
+          </li>
+        </ul>
+        <button
+          className={`nav-hamburger${navOpen ? ' open' : ''}`}
+          aria-label="Menu"
+          onClick={() => setNavOpen(o => !o)}
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
 
       <main className="profile-main">
 
@@ -235,15 +244,15 @@ export default function ProfilePage() {
             {/* Stats */}
             <div className="stats-grid">
               <div className="stat-card accent">
-                <div className="stat-val">12</div>
+                <div className="stat-val">3</div>
                 <div className="stat-label">Analisis Produk</div>
               </div>
               <div className="stat-card">
-                <div className="stat-val">5</div>
+                <div className="stat-val">3</div>
                 <div className="stat-label">Laporan Disimpan</div>
               </div>
               <div className="stat-card">
-                <div className="stat-val">3</div>
+                <div className="stat-val">1</div>
                 <div className="stat-label">Platform Dibandingkan</div>
               </div>
             </div>
@@ -252,10 +261,10 @@ export default function ProfilePage() {
             <div className="paket-card">
               <div>
                 <div className="paket-name">Paket Gratis</div>
-                <div className="paket-desc">Member sejak April 2025</div>
+                <div className="paket-desc">Member sejak April 2026</div>
               </div>
               <div className="paket-quota">
-                <div className="quota-val">6 / 10 analisis</div>
+                <div className="quota-val">3 / 5 analisis</div>
                 <div className="quota-bar">
                   <div className="quota-fill"></div>
                 </div>
